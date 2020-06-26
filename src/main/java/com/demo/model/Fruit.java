@@ -17,7 +17,7 @@ public class Fruit {
     private String description;
 
     @Column(name = "price")
-    private String price;
+    private double price;
 
     @Column(name = "unit")
     private String unit;
@@ -25,16 +25,31 @@ public class Fruit {
     @Column(name = "origin")
     private String origin;
 
-    @Column(name = "image")
-    private String image;
+    @Column(name = "thumbnail")
+    private String thumbnail;
+
+    @Column(name = "categoryId")
+    private Integer categoryId;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "categoryId")
+    @JoinColumn(name = "categoryId", updatable = false, insertable = false)
     private Category category;
+
+    public Fruit(String name, String description, double price, String unit, String origin, String thumbnail, int categoryId) {
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.unit = unit;
+        this.origin = origin;
+        this.thumbnail = thumbnail;
+        this.categoryId = categoryId;
+    }
 
     public Category getCategory() {
         return category;
     }
+
+
 
     public void setCategory(Category category) {
         this.category = category;
@@ -67,14 +82,6 @@ public class Fruit {
         this.description = description;
     }
 
-    public String getPrice() {
-        return price;
-    }
-
-    public void setPrice(String price) {
-        this.price = price;
-    }
-
     public String getUnit() {
         return unit;
     }
@@ -91,11 +98,27 @@ public class Fruit {
         this.origin = origin;
     }
 
-    public String getImage() {
-        return image;
+    public Integer getCategoryId() {
+        return categoryId;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setCategoryId(Integer categoryId) {
+        this.categoryId = categoryId;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public String getThumbnail() {
+        return thumbnail;
+    }
+
+    public void setThumbnail(String thumbnail) {
+        this.thumbnail = thumbnail;
     }
 }
