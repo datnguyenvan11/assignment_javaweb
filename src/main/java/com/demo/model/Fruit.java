@@ -47,14 +47,11 @@ public class Fruit {
         return category;
     }
 
-
-
     public void setCategory(Category category) {
         this.category = category;
     }
 
-    public Fruit() {
-    }
+    public Fruit() { }
 
     public int getId() {
         return id;
