@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "AddCategoryServlet", urlPatterns = "/insert-category")
+@WebServlet(name = "AddCategoryServlet", urlPatterns = "/admin/insert-category")
 public class AddCategoryServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         FruitDAO dao = new FruitDAO();

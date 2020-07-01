@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "AddFruitServlet", urlPatterns = "/insert-fruit")
+@WebServlet(name = "AddFruitServlet", urlPatterns = "/admin/insert-fruit")
 public class AddFruitServlet extends HttpServlet {
 
 
