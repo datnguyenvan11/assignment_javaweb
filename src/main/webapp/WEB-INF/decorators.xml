@@ -4,7 +4,7 @@
 <!--        <pattern>/api*</pattern>-->
 <!--        <pattern>/ajax*</pattern>-->
 <!--    </excludes>-->
-    <decorator name="template" page="template.jsp">
+    <decorator name="template" page="layout.jsp">
         <pattern>/*</pattern>
     </decorator>
 <!--    <decorator name="admin" page="admin-template.jsp">-->
